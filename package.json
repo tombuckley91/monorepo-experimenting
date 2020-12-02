@@ -5,5 +5,29 @@
   "repository": "git@github.com:mike-north/js-ts-monorepos.git",
   "author": "Mike North <michael.l.north@gmail.com>",
   "license": "BSD-2-Clause",
-  "private": true
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "scripty",
+    "lint": "scripty",
+    "clean": "scripty",
+    "test": "scripty"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.14.0",
+    "lerna": "^3.22.1",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0"
+  },
+  "volta": {
+    "node": "14.15.1",
+    "yarn": "1.22.10"
+  }
 }
